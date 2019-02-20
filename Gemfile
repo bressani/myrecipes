@@ -6,8 +6,9 @@ ruby '2.6.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 
-gem 'bootstrap-sass', '~> 3.4.1'
+gem 'bootstrap'
 gem 'jquery-rails'
+
 # Use psql as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
