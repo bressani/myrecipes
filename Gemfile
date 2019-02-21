@@ -8,6 +8,7 @@ gem 'rails', '~> 5.2.2'
 
 gem 'bootstrap'
 gem 'jquery-rails'
+gem 'mini_racer'
 
 # Use psql as the database for Active Record
 gem 'pg'
