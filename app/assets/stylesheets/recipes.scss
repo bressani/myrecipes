@@ -2,11 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.recipes-index {
+.recipes {
   padding: 1rem;
   border: 10px solid rgba(0, 0, 0, .2);
-  border-radius: 10px;
+  border-radius: 6px;
   border-width: 1px;
   margin: 0.5rem;
-  background-color: rgb(239, 239, 239)
+  background-color: rgb(237, 239, 238)
+}
+
+.recipes a {
+  color: #073B15;
+}
+
+.chef-info {
+  margin-top: 15px;
+}
+
+.colormatch a {
+  color: #073B15;
 }

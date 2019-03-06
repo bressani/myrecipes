@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   get 'pages/home', to: 'pages#home'
   get 'about', to: 'about#show'
 
-  get 'recipes', to: 'recipes#index'
+  resources :recipes
 end
