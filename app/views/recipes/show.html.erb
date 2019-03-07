@@ -7,17 +7,16 @@
     <hr>
 
     <div class="float-right">
-      <p> <em> Created by: </em></p>
+      <p class="center"> <em> Created by: </em></p>
       <p class="center">
         <%= link_to gravatar_for(@recipe.chef), recipes_path %>
       </p>
       <p class="center">
-        <small> <%= @recipe.chef.chefname.capitalize %> </small>
-        <div class="float-right">
+        <div class="center"> <%= @recipe.chef.chefname.capitalize %> </div>
+        <small>
           <%= time_ago_in_words(@recipe.created_at) %> ago
-        </div>
+        </small>
       </p>
     </div>
-
   </div>
 </div>
