@@ -27,6 +27,10 @@ class RecipesTest < ActionDispatch::IntegrationTest
     assert_match @recipe.name.capitalize, response.body
     assert_match @recipe.description, response.body
     assert_match @chef.chefname, response.body
+
+    assert_select '.recipe-actions'
+    assert_select "a[href=?]", edit_recipe_path(@recipe), text: 'Edit'
+    assert_select "a[href=?]", recipe_path(@recipe), text: 'Delete'
   end
 
   test "create new valid recipe" do
@@ -51,7 +55,7 @@ class RecipesTest < ActionDispatch::IntegrationTest
       post recipes_path, params: { recipe: { name: " ", description: " " } }
     end
     assert_template 'recipes/new'
-    assert_select 'h5'
+    assert_select '.alert-danger'
     assert_match "prohibited this", response.body
   end
 

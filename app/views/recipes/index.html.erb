@@ -9,7 +9,7 @@
     </div>
     <div class="col-md-8 recipes">
       <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
-      <p><%= truncate(recipe.description, length: 150) %></p>
+      <p><%= truncate(simple_format(recipe.description), length: 150) %></p>
       <p>
         <span class="quiet">
           <small>Created <%= time_ago_in_words(recipe.created_at) %> ago</small>
