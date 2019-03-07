@@ -6,7 +6,7 @@
     <%= simple_format(@recipe.description) %>
     <hr>
 
-    <div class="float-right">
+    <div class="float-right", style="margin-right: 12px;">
       <p class="center"> <em> Created by: </em></p>
       <p class="center">
         <%= link_to gravatar_for(@recipe.chef), recipes_path %>
