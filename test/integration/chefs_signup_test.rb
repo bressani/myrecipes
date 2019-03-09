@@ -24,6 +24,5 @@ class ChefsSignupTest < ActionDispatch::IntegrationTest
     assert_template 'chefs/show'
     assert_match "Welcome bressani to MyRecipes App!", response.body
     assert_match 'bressani', response.body
-    assert_match 'bressani@jair.junior', response.body
   end
 end
