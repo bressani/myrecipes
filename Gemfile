@@ -9,6 +9,8 @@ gem 'rails', '~> 5.2.2'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'mini_racer'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 # Use psql as the database for Active Record
 gem 'pg'
