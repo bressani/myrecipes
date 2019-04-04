@@ -10,7 +10,7 @@
       <p><%= simple_format(truncate(recipe.description, length: 150)) %></p>
       <p>
         <span class="quiet">
-          <small>Created <%= time_ago_in_words(recipe.created_at) %> ago</small>
+          <small>Created <%= time_ago_in_words(recipe.created_at) %> ago by <%= recipe.chef.chefname.titleize %></small>
         </span>
 
         <% if logged_in? && (current_chef == recipe.chef || current_chef.admin?) %>

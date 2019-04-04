@@ -43,7 +43,7 @@
           <% if logged_in? %>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <%= current_chef.chefname.split(/\s/).first.capitalize %>'s profile <%= "[Admin]" if current_chef.admin? %>
+                <%= current_chef.chefname.split(/\s/).first.titleize %>'s profile <%= "[Admin]" if current_chef.admin? %>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <%= link_to "View your profile", chef_path(current_chef), class: "dropdown-item" %>
