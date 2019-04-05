@@ -1,0 +1,18 @@
+<%= render 'shared/page_title', title: 'Showing all ingredients' %>
+<div align="center">
+  <%= will_paginate(:renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center') %>
+  <% @ingredients.each do |ingredient| %>
+    <ul class="listing">
+      <div class="row">
+        <div class="col-md-4 offset-4 items-listing">
+          <li class="items-listing-title"><%= link_to ingredient.name.titleize, ingredient_path(ingredient) %></li>
+          <li><small><%= pluralize(ingredient.recipes.count, "recipe") if ingredient.recipes %></small></li>
+          <% if logged_in? && current_chef.admin? %>
+            <li><%= link_to "Edit this ingredient", edit_ingredient_path(ingredient) %></li>
+          <% end %>
+        </div>
+      </div>
+    </ul>
+  <% end %>
+  <%= will_paginate(:renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center') %>
+</div>

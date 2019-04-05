@@ -1,0 +1,9 @@
+<%= render 'shared/page_title', title: @ingredient.name %>
+<% unless @ingredient.recipes.empty? %>
+  <h4 align="center">Recipes containing <%= @ingredient.name %> </h4>
+  <%= will_paginate(@ingredient_recipes, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center') %>
+  <%= render 'recipes/recipe', obj: @ingredient_recipes %>
+  <%= will_paginate(@ingredient_recipes, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center') %>
+<% else %>
+  <h4 align="center">No recipes yet!</h4>
+<% end %>
