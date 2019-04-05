@@ -19,7 +19,16 @@
           <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Enter steps to create recipe"%>
         </div>
       </div>
-
+      <div class="form-group row">
+        <div class="offset-4 col-md-8">
+          <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name do |cb| %>
+            <label class="checkbox-inline">
+             <%= cb.check_box %>
+             <%= cb.label %>
+            </label>
+           <% end %>
+        </div>
+      </div>
       <div class="form-group row">
         <div class="offset-2 col-md-10">
           <%= f.submit class: "btn btn-primary btn-lg btn-xlarge" %>

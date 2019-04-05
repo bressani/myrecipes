@@ -5,6 +5,9 @@
     <h4 class="center description"><strong>Steps: </strong></h4>
     <%= simple_format(@recipe.description) %>
     <hr>
+    <% if @recipe.ingredients.any? %>
+      <p>Ingredients: <%= render @recipe.ingredients %> </p>
+    <% end %>
 
     <div class="float-right", style="margin-right: 12px;">
       <p class="center"> <em> Created by: </em></p>
