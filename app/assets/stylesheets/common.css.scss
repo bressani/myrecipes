@@ -1,0 +1,23 @@
+.items-listing {
+  padding: 1rem;
+  border: 10px solid rgba(0, 0, 0, .2);
+  border-radius: 6px;
+  border-width: 1px;
+  margin: 0.5rem;
+  background-color: rgb(237, 239, 238)
+}
+
+.items-listing a {
+  color: #073B15;
+}
+
+.listing {
+  list-style: none;
+  padding-left: 0;
+}
+
+.items-listing-title {
+  color: #073B15;
+  font-weight: bold;
+  font-size: 1.25em;
+}
