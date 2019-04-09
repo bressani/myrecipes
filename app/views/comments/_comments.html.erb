@@ -1,0 +1,7 @@
+<div align="center">
+  <%= will_paginate(comments, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center') %>
+</div>
+<% comments.each do |comment| %>
+  <%= render(partial: 'comments/comment', object: comment) %>
+<% end %>
+<%= will_paginate(comments, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center') %>
